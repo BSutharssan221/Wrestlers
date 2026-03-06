@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Cody Rhodes Fan Hub</title>
+<header>
+ <div class="container">
+ <nav class="navbar">
+  <ul>
+    
+ <li><a href="#CodyRhodes.html"><img src="American Nightmare.jpeg" length="60%" width="60%" class="logo">Cody Rhodes</a></li>
+ <li><a href="#JacobFatu.html"><img src="SamoanWerewolf.png" length="70%" width="70%" class="logo">Jacob Fatu</a></li>
+ <li><a href="#JeyUso.html"><img src="YEET.png" length="70%" width="70%" class="logo">Jey Uso</a></li>
+ <li><a href="#CMPunk.html"><img src="CMPunk.png" length="60%" width="60%" class="logo">CM Punk</a></li>
+ <li><a href="#DragonLee.html"><img src="DragonLee.png" length="70%" width="70%" class="logo">Dragon Lee</a></li>
+ <li><a href="#BronBreakker.html"><img src="BronBreakker.png" length="60%" width="60%" class="logo">Bron Breakker</a></li>
+ </ul>
+ </nav>
+ </div>
+</header>
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#111;
+color:white;
+text-align:center;
+}
+
+header{
+background:#c8102e;
+padding:20px;
+font-size:30px;
+font-weight:bold;
+}
+
+.container{
+padding:40px;
+}
+
+input{
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+background:#c8102e;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#a50d23;
+}
+
+.card{
+background:#222;
+padding:20px;
+margin:20px;
+border-radius:10px;
+display:inline-block;
+width:220px;
+}
+
+.card img{
+width:200px;
+border-radius:10px;
+}
+
+.hidden{
+display:none;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav button{
+margin:5px;
+}
+
+</style>
+
+<script>
+
+function login(){
+
+let user = document.getElementById("user").value
+let pass = document.getElementById("pass").value
+
+if(user === "fan" && pass === "rhodes"){
+
+document.getElementById("loginPage").style.display="none"
+document.getElementById("mainSite").style.display="block"
+
+}else{
+
+alert("Wrong login!")
+
+}
+
+}
+
+function showSection(section){
+
+document.getElementById("home").style.display="none"
+document.getElementById("merch").style.display="none"
+
+document.getElementById(section).style.display="block"
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+Cody Rhodes Fan Hub
+</header>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage" class="container">
+
+<h2>Login</h2>
+
+<p>Enter the fan login to access the site</p>
+
+<input id="user" placeholder="Username"><br>
+<input id="pass" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<p>Demo login: fan / rhodes</p>
+
+</div>
+
+
+<!-- MAIN SITE -->
+
+<div id="mainSite" class="hidden">
+
+<nav>
+
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('merch')">Merch</button>
+
+</nav>
+
+<!-- HOME -->
+
+<div id="home" class="container">
+
+<h1>Cody Rhodes</h1>
+
+<p>
+Cody Rhodes is one of the most popular professional wrestlers in the world.
+He is known for his leadership in AEW and his return to WWE where he finished
+his story by winning championships and becoming one of the top stars.
+</p>
+
+<h3>Achievements</h3>
+
+<ul style="list-style:none">
+
+<li>WWE Champion</li>
+<li>Royal Rumble Winner</li>
+<li>Founder of AEW</li>
+
+</ul>
+
+</div>
+
+
+<!-- MERCH -->
+
+<div id="merch" class="container" style="display:none">
+
+<h1>Merch Store</h1>
+
+<div class="card">
+<img src="https://www.hottopic.com/product/wwe-cody-rhodes-skull-logo-t-shirt/32192726.html">
+<h3>American Nightmare Shirt</h3>
+<p>£25</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<img src="https://www.reddit.com/r/SquaredCircle/comments/1bipkc3/the_newest_cody_rhodes_shirt/">
+<h3>New Cody Rhodes t-shirt</h3>
+<p>£50</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<img src="https://ukamericansportsstore.co.uk/products/cody-rhodes-wwe-prosphere-american-nightmare-flag-t-shirt-black-usa-stock">
+<h3>Cody Rhodes t-shirt</h3>
+<p>£42</p>
+<button>Buy</button>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
